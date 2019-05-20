@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ToDo List</string>
+    <string name="dialog_new_entry_title">New ToDo Item</string>
+    <string name="dialog_edit_entry_title">Edit ToDo Item</string>
+    <string name="entry_hint_text">Enter Your ToDo Item</string>
+    <string name="hint_todo_item">your todo item</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">delete</string>
+    <string name="edit">edit</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="layout_margin">10dp</dimen>
+    <dimen name="item_margin">5dp</dimen>
+    <dimen name="dialog_title_fontsize">24sp</dimen>
+    <dimen name="dialog_input_fontsize">21sp</dimen>
+    <dimen name="list_item_fontsize">21sp</dimen>
+</resources>
