@@ -2,23 +2,28 @@ package com.alexshr.otus.fdbsample
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.list_item.view.*
+import kotlinx.android.extensions.LayoutContainer
+import kotlinx.android.synthetic.main.list_item.*
 
 /**
- * Created by alexshr on 09.05.2019.
+Created by alexshr on 09.05.2019.
+
+implements LayoutContainer ("kotlin for android developers" 15.2)
+for use cache and direct access to container views
+
  */
-class TodoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class TodoViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer {
 
     fun bind(
         todo: Todo,
         editClickListener: View.OnClickListener,
         deleteClickListener: View.OnClickListener
     ) {
-        itemView.tag = todo.id
-        itemView.titleTw.text = todo.title
-        itemView.timestampTw.text = todo.timestamp
+        containerView.tag = todo.id
+        titleTw.text = todo.title
+        timestampTw.text = todo.timestamp
 
-        itemView.editBtn.setOnClickListener(editClickListener)
-        itemView.delBtn.setOnClickListener(deleteClickListener)
+        editBtn.setOnClickListener(editClickListener)
+        delBtn.setOnClickListener(deleteClickListener)
     }
 }
