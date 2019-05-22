@@ -15,14 +15,13 @@ const val TITLE_PATH = "title"
 const val TIMESTAMP_PATH = "timestamp"
 
 class DbHelper {
-    private val todosRef: DatabaseReference
+    private val todosRef: DatabaseReference = FirebaseDatabase.getInstance().getReference(PATH)
 
     init {
-        todosRef = FirebaseDatabase.getInstance().getReference(PATH)
         todosRef.keepSynced(true)
     }
 
-    public fun saveTodo(todo: Todo) {
+    fun saveTodo(todo: Todo) {
         if (todo.id == "") createTodo(todo)
         else updateTodo(todo)
     }
@@ -40,11 +39,11 @@ class DbHelper {
         todosRef.child(todo.id).child(TIMESTAMP_PATH).setValue(getTimestamp())
     }
 
-    public fun deleteTodo(todo: Todo) {
+    fun deleteTodo(todo: Todo) {
         todosRef.child(todo.id).setValue(null)
     }
 
-    public fun getRecyclerOptions(owner: LifecycleOwner) = FirebaseRecyclerOptions.Builder<Todo>()
+    fun getRecyclerOptions(owner: LifecycleOwner) = FirebaseRecyclerOptions.Builder<Todo>()
         .setQuery(todosRef.orderByKey(), Todo::class.java)
         .setLifecycleOwner(owner)
         .build()
