@@ -1,4 +1,4 @@
-package com.alexshr.otus.fdbsample
+package com.funke.firebase.fbsample
 
 import android.os.Bundle
 import android.text.InputType

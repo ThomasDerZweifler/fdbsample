@@ -1,4 +1,4 @@
-package com.alexshr.otus.fdbsample
+package com.funke.firebase.fdbsample
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

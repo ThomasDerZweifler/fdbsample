@@ -1,4 +1,4 @@
-package com.alexshr.otus.fdbsample
+package com.funke.firebase.fbsample
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

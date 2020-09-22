@@ -1,4 +1,4 @@
-package com.alexshr.otus.fdbsample
+package com.funke.firebase.fbsample
 
 import android.os.Parcelable
 import com.google.firebase.database.IgnoreExtraProperties

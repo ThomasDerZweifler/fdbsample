@@ -1,4 +1,4 @@
-package com.alexshr.otus.fdbsample
+package com.funke.firebase.fbsample
 
 import androidx.lifecycle.LifecycleOwner
 import com.firebase.ui.database.FirebaseRecyclerOptions
